@@ -18,6 +18,8 @@ class MainScreen extends StatelessWidget {
         length: 2,
         child: Scaffold(
             appBar: AppBar(
+              elevation: 0,
+              backgroundColor: Colors.amberAccent,
               title: Text(cubit.all!.title),
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back),
@@ -30,15 +32,15 @@ class MainScreen extends StatelessWidget {
                 ),
               ],
               bottom: TabBar(
-                  indicatorWeight: 3,
+                  indicatorWeight: 2,
                   indicatorColor: Theme.of(context).primaryColor,
-                  tabs: const [Text('Info'), Text('Reviews')]),
+                  tabs: const [Text('Info' , style: TextStyle(fontSize: 20),), Text('Reviews' ,style: TextStyle(fontSize: 20))]),
             ),
             body: TabBarView(
               children: [
                 InfoWidget(),
                 Container(
-                  color: Colors.green,
+                  color: Colors.grey,
                 )
               ],
             )),
