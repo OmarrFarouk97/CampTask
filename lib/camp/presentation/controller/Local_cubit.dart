@@ -19,10 +19,7 @@ All? all;
 
 
   int? maxLines = 2;
-  void seeDetails() {
-    maxLines = maxLines == null ? 2 : null;
-    emit(SeeDetails());
-  }
+
 
 
   Future<Either<Failure, All>> getCamps() async{

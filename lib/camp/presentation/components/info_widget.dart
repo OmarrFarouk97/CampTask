@@ -7,7 +7,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../domain/entity/RelatedProperties.dart';
 
 class InfoWidget extends StatefulWidget {
-  InfoWidget({Key? key}) : super(key: key);
+  const InfoWidget({Key? key}) : super(key: key);
 
   @override
   State<InfoWidget> createState() => _InfoWidgetState();
@@ -207,12 +207,8 @@ class _InfoWidgetState extends State<InfoWidget> {
                       const SizedBox(height: 20),
 
                       Text(flag
-                          ? (firstHalf! + "...")
+                          ? ("${firstHalf!}...")
                           : (firstHalf! + secondHalf!)),
-                      // Text(
-                      //     cubit.all!.description,
-                      //     maxLines: cubit.maxLines,
-                      //     style:TextStyle(fontSize: 14,fontWeight: FontWeight.normal)),
                       Center(
                         child: TextButton(
                             onPressed: () {
@@ -222,12 +218,8 @@ class _InfoWidgetState extends State<InfoWidget> {
                             },
                             child: Text(
                               flag ? "show more" : "show less",
-
-                              // cubit.maxLines == 2
-                              //     ? 'see Details'
-                              //     : 'show Less',
                               style:
-                                  TextStyle(fontSize: 16, color: Colors.blue),
+                                  const TextStyle(fontSize: 16, color: Colors.blue),
                             )),
                       ),
                       const Divider(
@@ -235,7 +227,7 @@ class _InfoWidgetState extends State<InfoWidget> {
                         thickness: 1.5,
                       ),
                       const SizedBox(height: 10),
-                      Text('Location',
+                      const Text('Location',
                           style: TextStyle(
                               fontSize: 20,
                               color: Colors.amberAccent,
@@ -473,7 +465,7 @@ class _InfoWidgetState extends State<InfoWidget> {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.amberAccent,
+                backgroundColor: Colors.amberAccent,
               ),
               onPressed: () {},
               child: Center(
@@ -514,7 +506,7 @@ class HotelItem extends StatelessWidget {
               height: 140,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Row(
@@ -540,12 +532,12 @@ class HotelItem extends StatelessWidget {
           ),
           Text(
             item.type,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 18,
                 color: Colors.black87,
                 fontWeight: FontWeight.normal),
           ),
-          SizedBox(
+          const SizedBox(
             height: 7,
           ),
           Row(
@@ -563,7 +555,7 @@ class HotelItem extends StatelessWidget {
           ),
           const Spacer(),
           Text(item.price,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 17,
                   color: Colors.blue,
                   fontWeight: FontWeight.bold)),
